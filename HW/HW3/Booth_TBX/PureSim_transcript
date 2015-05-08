@@ -1,0 +1,175 @@
+rm -rf work transcript vsim.wlf dpi.so modelsim.ini output.log result.TBX tbxsvlink.log
+rm -rf waves.wlf vsim_stacktrace.vstf sc_dpiheader.h hdl.* debussy.cfg  dmTclClient.log  partition.info 
+rm -rf tbxbindings.h  tbx.dir  tbx.map   veloce_c_transcript dmslogdir    ECTrace.log      Report.out      tbx.log  tbxsim.v  vlesim.log
+rm -rf veloce.map velrunopts.ini edsenv veloce.log veloce.med veloce.wave velocework puresimwork 
+vlib puresimwork
+vmap work puresimwork
+vmap work puresimwork 
+Model Technology ModelSim SE vmap 10.3 Lib Mapping Utility 2014.01 Jan  6 2014
+vmap work puresimwork 
+Copying /pkgs/mentor/questa/10.3/questasim/linux/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini
+vlog -f /pkgs/mentor/veloce/v3007/Veloce_v3.0.0.7/tbx/questa/hdl/xtlm_files.f 
+QuestaSim vlog 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 16:02:33 on May 08,2015
+vlog -f /pkgs/mentor/veloce/v3007/Veloce_v3.0.0.7/tbx/questa/hdl/xtlm_files.f 
+-- Compiling package tbx_event_pkg
+-- Compiling package xtlm_base_pkg
+-- Importing package tbx_event_pkg
+-- Compiling package xtlm_pkg
+-- Importing package xtlm_base_pkg
+
+Top level modules:
+	--none--
+End time: 16:02:33 on May 08,2015
+Errors: 0, Warnings: 0
+vlog hvl/booth_hvl.sv
+QuestaSim vlog 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 16:02:33 on May 08,2015
+vlog hvl/booth_hvl.sv 
+-- Compiling package booth_hvl_sv_unit
+-- Importing package xtlm_pkg
+-- Importing package xtlm_base_pkg
+-- Importing package tbx_event_pkg
+-- Compiling module booth_hvl
+
+Top level modules:
+	booth_hvl
+End time: 16:02:34 on May 08,2015
+Errors: 0, Warnings: 0
+vlog hdl/top.sv hdl/booth_fsm.sv
+QuestaSim vlog 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 16:02:34 on May 08,2015
+vlog hdl/top.sv hdl/booth_fsm.sv 
+-- Compiling package top_sv_unit
+-- Compiling module top
+-- Compiling module booth_fsm
+
+Top level modules:
+	top
+End time: 16:02:34 on May 08,2015
+Errors: 0, Warnings: 0
+velhvl -sim puresim
+Info!     [velhvl-25466]: : Velcomp Version 3.0.0.7
+                         
+Info!     [velhvl-25225]: : Command Line for tool : velhvl is :
+                          -sim puresim
+Info!     [velhvl-18201]: : Started task: compile_hvl_0 (velocesolo.ece.pdx.edu)
+Warning   [hvlcomp-25774]: : Neither -cpppath nor -cppinstall specified. Using the following g++ compiler from questa home: '/pkgs/mentor/questa/10.3/questasim/gcc-4.5.0-linux/bin/g++'.
+Note!     [hvlcomp-25763]: : 'comp -hvl questa' specified in config file. C compilation will not be performed in this integrated Flow of tbx with questa. Please compile C/SystemC files using Questa-TBX integrated flow guidelines.
+Info!     [velhvl-18231]: : Completed task: compile_hvl_0 (velocesolo.ece.pdx.edu) 0 minutes
+Info!     [velhvl-25218]: : Dtask compile report is saved in /u/bhunt2/Repos/ECE510-EFV/HW/Assignment3/BoothTBX/veloce.med/veloce.out/veloce.report
+                          Each detailed task information is saved in /u/bhunt2/Repos/ECE510-EFV/HW/Assignment3/BoothTBX/veloce.med/veloce.out/veloce.stat
+                         
+Info!     [velhvl-25220]: : Overall Running time: (Fri May 8 16:02:39 2015)
+                          0 minutes.
+                         
+                         
+Info!     [velhvl-25219]: : Bad Machines:
+                          None.
+                         
+                         
+Info!     [velhvl-25214]: : Dtask exiting ...
+Info!     [velhvl-25215]: : Compilation finished successfully.
+vsim -c booth_hvl top TbxSvManager +RUNS=50 +SIGNS=-+ -do "run -all" +tbxrun+"" -l output.log
+Reading pref.tcl 
+
+# 10.3
+
+# vsim +RUNS=50 +SIGNS=-+ +tbxrun+ -do "run -all" -l output.log -c booth_hvl top TbxSvManager 
+# Start time: 16:02:40 on May 08,2015
+# Loading /var/tmp/bhunt2@velocesolo.ece.pdx.edu_dpi_2693/linux_gcc-4.5.0/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.3 linux Jan  6 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.tbx_event_pkg(fast)
+# Loading work.xtlm_base_pkg(fast)
+# Loading work.xtlm_pkg(fast)
+# Loading work.booth_hvl_sv_unit(fast)
+# Loading work.booth_hvl(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.GlobalPipeInfo(fast)
+# Loading work.scemi_input_pipe(fast__1)
+# Loading work.scemi_output_pipe(fast__1)
+# Loading work.TbxSvManager(fast)
+# Loading /u/bhunt2/Repos/ECE510-EFV/HW/Assignment3/BoothTBX/puresimwork/_sc/linux_gcc-4.5.0/systemc.so
+# Loading /u/bhunt2/Repos/ECE510-EFV/HW/Assignment3/BoothTBX/puresimwork.TbxScManager
+# Compiling /var/tmp/bhunt2@velocesolo.ece.pdx.edu_dpi_2693/linux_gcc-4.5.0/exportwrapper.c
+# Loading /var/tmp/bhunt2@velocesolo.ece.pdx.edu_dpi_2693/linux_gcc-4.5.0/dpi_auto_compile.so
+# run -all 
+# Generating          50 Operands
+# Generating Multiplicand with - Sign and Multiplier with + Sign
+# 
+# Started at
+# Fri May  8 16:02:43 PDT 2015
+# Multiplicand=-1332443372 Multiplier= 1974070700 Expected product= -2630337420074400400 Obtained product = -2630337420074400400
+# Multiplicand=-1149004638 Multiplier= 1268343467 Expected product= -1457332526159999946 Obtained product = -1457332526159999946
+# Multiplicand= -215003675 Multiplier=  715589781 Expected product=  -153854432707445175 Obtained product =  -153854432707445175
+# Multiplicand= -809908200 Multiplier=   35610838 Expected product=   -28841509705071600 Obtained product =   -28841509705071600
+# Multiplicand= -506750811 Multiplier= 1700872466 Expected product=  -861918501553069926 Obtained product =  -861918501553069926
+# Multiplicand= -233372066 Multiplier=  523470461 Expected product=  -122163382973542426 Obtained product =  -122163382973542426
+# Multiplicand= -789211091 Multiplier= 1133754838 Expected product=  -894771892624508258 Obtained product =  -894771892624508258
+# Multiplicand= -859878750 Multiplier= 1824514525 Expected product= -1568861269113843750 Obtained product = -1568861269113843750
+# Multiplicand= -887639062 Multiplier=  546788621 Expected product=  -485350938656713502 Obtained product =  -485350938656713502
+# Multiplicand=-1038018737 Multiplier= 1030791867 Expected product= -1069981271893211979 Obtained product = -1069981271893211979
+# Multiplicand= -292629526 Multiplier= 2002602792 Expected product=  -586020705789236592 Obtained product =  -586020705789236592
+# Multiplicand=-1420504028 Multiplier=   28236671 Expected product=   -40110304892810788 Obtained product =   -40110304892810788
+# Multiplicand=-2090520081 Multiplier= 1230584860 Expected product= -2572562361204573660 Obtained product = -2572562361204573660
+# Multiplicand=-1727281822 Multiplier= 1161957804 Expected product= -2007028592780238888 Obtained product = -2007028592780238888
+# Multiplicand=  -19544516 Multiplier= 1520747140 Expected product=   -29722266809684240 Obtained product =   -29722266809684240
+# Multiplicand= -547895437 Multiplier= 1317923577 Expected product=  -722084314153018149 Obtained product =  -722084314153018149
+# Multiplicand=-1324884814 Multiplier= 1306970094 Expected product= -1731584829892752516 Obtained product = -1731584829892752516
+# Multiplicand= -694662491 Multiplier= 1813530746 Expected product= -1259791785521448286 Obtained product = -1259791785521448286
+# Multiplicand= -532451269 Multiplier= 1244112561 Expected product=  -662429311883289909 Obtained product =  -662429311883289909
+# Multiplicand= -262109924 Multiplier=  442916729 Expected product=  -116092870176518596 Obtained product =  -116092870176518596
+# Multiplicand= -522111081 Multiplier=  914727839 Expected product=  -477589540841083959 Obtained product =  -477589540841083959
+# Multiplicand= -771083282 Multiplier= 1636969959 Expected product= -1262240168521125438 Obtained product = -1262240168521125438
+# Multiplicand=-1358590898 Multiplier= 1124966191 Expected product= -1528368827650329518 Obtained product = -1528368827650329518
+# Multiplicand= -487461608 Multiplier=  513527317 Expected product=  -250324851696745736 Obtained product =  -250324851696745736
+# Multiplicand= -187787135 Multiplier= 2144797579 Expected product=  -402765392515346165 Obtained product =  -402765392515346165
+# Multiplicand= -244883808 Multiplier= 1322257583 Expected product=  -323799472081916064 Obtained product =  -323799472081916064
+# Multiplicand= -365441599 Multiplier= 1202585505 Expected product=  -439474769881422495 Obtained product =  -439474769881422495
+# Multiplicand=-1249748085 Multiplier=  705661536 Expected product=  -881899153274158560 Obtained product =  -881899153274158560
+# Multiplicand=-1655965830 Multiplier= 1314831779 Expected product= -2177316498222111570 Obtained product = -2177316498222111570
+# Multiplicand=-1913028174 Multiplier= 1403531871 Expected product= -2684996012329933554 Obtained product = -2684996012329933554
+# Multiplicand=-1469157332 Multiplier= 2109172002 Expected product= -3098705511187418664 Obtained product = -3098705511187418664
+# Multiplicand= -129544385 Multiplier= 1106964679 Expected product=  -143401058557777415 Obtained product =  -143401058557777415
+# Multiplicand= -509823187 Multiplier=  616434859 Expected product=  -314272784393275633 Obtained product =  -314272784393275633
+# Multiplicand=  -86436491 Multiplier=  738841876 Expected product=   -63862899165297116 Obtained product =   -63862899165297116
+# Multiplicand=-2136202408 Multiplier= 1961761491 Expected product= -4190719620995870328 Obtained product = -4190719620995870328
+# Multiplicand=-1378744777 Multiplier=  419280105 Expected product=  -578080254868761585 Obtained product =  -578080254868761585
+# Multiplicand=-2115428835 Multiplier=  186711074 Expected product=  -394973989753418790 Obtained product =  -394973989753418790
+# Multiplicand= -264740204 Multiplier= 2034112661 Expected product=  -538511400832122844 Obtained product =  -538511400832122844
+# Multiplicand=-1097458494 Multiplier= 1870858412 Expected product= -2053189455320751528 Obtained product = -2053189455320751528
+# Multiplicand= -179118526 Multiplier= 1316189900 Expected product=  -235753994824087400 Obtained product =  -235753994824087400
+# Multiplicand= -917583846 Multiplier= 2060061342 Expected product= -1890279009188281332 Obtained product = -1890279009188281332
+# Multiplicand= -331365113 Multiplier=  525675143 Expected product=  -174190403161486159 Obtained product =  -174190403161486159
+# Multiplicand= -981473616 Multiplier= 2024258198 Expected product= -1986756013308703968 Obtained product = -1986756013308703968
+# Multiplicand=-1317339031 Multiplier=  557098245 Expected product=  -733887262240100595 Obtained product =  -733887262240100595
+# Multiplicand= -733572553 Multiplier=  131314125 Expected product=   -96328437921211125 Obtained product =   -96328437921211125
+# Multiplicand=-1062574352 Multiplier=  172552960 Expected product=  -183350349657681920 Obtained product =  -183350349657681920
+# Multiplicand=-1411780856 Multiplier= 1935821737 Expected product= -2732956068925266872 Obtained product = -2732956068925266872
+# Multiplicand=-1158360308 Multiplier=  656932335 Expected product=  -760964341905759180 Obtained product =  -760964341905759180
+# Multiplicand=-1691642517 Multiplier=  211824709 Expected product=  -358331683895552553 Obtained product =  -358331683895552553
+# 
+#  Error: receive request (for Input pipe:
+#         (top.inputpipe.receive)
+#         from HDL cannot be fullfiled because HVL is not pushing data into buffer..
+# 
+# 
+# ** Note: $finish    : /pkgs/mentor/veloce/v3007/Veloce_v3.0.0.7/tbx/scemi_pipe_sim/hdl/scemi_pipe_ifs.sv(195)
+#    Time: 19395 ns  Iteration: 1  Instance: /top
+# 
+# Ended at
+# Fri May  8 16:02:43 PDT 2015
+# All tests are successful
