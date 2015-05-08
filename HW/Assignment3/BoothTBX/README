@@ -1,0 +1,20 @@
+To compile for PureSim mode 
+
+make puresim 
+
+To compile for Veloce mode
+
+make veloce 
+
+To launch the simulation 
+
+vsim -novopt top booth_hvl TbxSvManager +RUNS=<NumberofTests> +SIGNS=<SignsofOperands>
+
+NumberofTests = Number of test cases you'd like to generate
+SignsofOperands = Signs of multiplicand and multiplier you;d like
+
+e.g.
+vsim -novopt top booth_hvl TbxSvManager +RUNS=50 +SINGS=+-
+
+The above command launches simulation and generates 50 test cases where Multiplicand is 
+Positive (+) and Multiplier is Negative (-)

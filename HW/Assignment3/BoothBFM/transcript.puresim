@@ -1,0 +1,32 @@
+# vsim -do "run -all" -c top_tb top_hdl 
+# Start time: 18:49:03 on May 03,2015
+# Loading /var/tmp/sghewari@velocesolo.ece.pdx.edu_dpi_3714/linux_gcc-4.5.0/export_tramp.so
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: top_tb.sv(25): Promoting a concatenation to an assignment pattern.
+# //  Questa Sim
+# //  Version 10.3 linux Jan  6 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.booth_pkg(fast)
+# Loading work.top_tb_sv_unit(fast)
+# Loading work.top_tb(fast)
+# Loading work.booth_fsm_sv_unit(fast)
+# Loading work.booth_if_sv_unit(fast)
+# Loading work.top_hdl(fast)
+# run -all 
+# '{multiplicand:5, multiplier:7, product:35}
+# ** Note: $stop    : top_tb.sv(31)
+#    Time: 790 ns  Iteration: 1  Instance: /top_tb
+# Break at top_tb.sv line 31
+# Stopped at top_tb.sv line 31 
+# [H[2J
+# can't read "transcript": no such variable
+# End time: 18:49:28 on May 03,2015
+# Errors: 0, Warnings: 0
