@@ -1,13 +1,13 @@
 module simple_alu_tb_dpi;
 
-parameter width = 8;
+parameter width = 32;
 
 reg 	clk;
 reg 	reset;
-bit 	operandA;
-bit 	operandB;
-bit 	opcode;
-bit 	result;
+bit [31:0] 	operandA;
+bit [31:0] 	operandB;
+bit [31:0] 	opcode;
+bit [31:0] 	result;
 integer	isMoreData;
 
 
@@ -38,7 +38,7 @@ end
 // will be called from HDL.
 
 import "DPI-C" task reset_completed ();
-import "DPI-C" task GetDataFromSoftware (output bit [31:0] operandA, output bit [31:0] operandB, output [31:0] opcode, output bit [31:0] isMoreData);
+import "DPI-C" task GetDataFromSoftware (output bit [31:0] operandA, output bit [31:0] operandB, output bit [31:0] opcode, output bit [31:0] isMoreData);
 import "DPI-C" task SendDataToSoftware (input bit [31:0] result);
 import "DPI-C" task computation_completed ();
 
@@ -56,11 +56,11 @@ begin
     if (!reset)
     begin
         
-		GetDataFromSoftware(operandA, operandB, opcode, isMoreData); //Get data from software
+	GetDataFromSoftware(operandA, operandB, opcode, isMoreData); //Get data from software
 		
-		repeat(2) @(posedge clk);
+	repeat(2) @(posedge clk);
 		
-		SendDataToSoftware(product);
+	SendDataToSoftware(result);
 		
         if (isMoreData == 0)
         begin
