@@ -1,0 +1,29 @@
+Reading pref.tcl 
+
+# 10.3
+
+# vsim -do "run -all" -c simple_alu_tb_dpi 
+# Start time: 16:29:13 on May 12,2015
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: hdl/simple_alu_tb_dpi.sv(73): (vopt-2241) Connection width does not match width of port 'opcode'. The port definition is at: hdl/simple_alu.sv(8).
+# //  Questa Sim
+# //  Version 10.3 linux Jan  6 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.simple_alu_tb_dpi(fast)
+# Loading /var/tmp/bhunt2@velocesolo.ece.pdx.edu_dpi_4727/linux_gcc-4.5.0/dpi_auto_compile.so
+# run -all 
+# 
+#     RESET signal has been asserted ....
+#     Starting processing ...............
+# 
+# All tests passed!
+# ** Note: $finish    : hdl/simple_alu_tb_dpi.sv(68)
+#    Time: 28390 ns  Iteration: 1  Instance: /simple_alu_tb_dpi

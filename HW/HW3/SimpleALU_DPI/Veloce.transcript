@@ -1,0 +1,115 @@
+
+# 
+
+# **************************************************
+#         Software Version  : 3.0.0.7      
+# **************************************************
+# Loading design veloce
+# Info!     [TCLC-5501]: : No session exist to attach. Potentially key option is
+#                        missing.
+# Info!     [TCLC-5501]: : New Session Launched.
+# Info!     [TCLC-5501]: : Single User Mode. Other users will not be able to
+#                        attach to this session.
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem
+#                        cont file'.
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem cont file'.
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem cont file'.
+# Design loaded successfully.
+# Info! : : Sourcing veloce.med/compileopts.ini
+# Info! : : Sourcing velrunopts.ini
+# Info!     [RTS-20008]: : Connecting to emulator 'velocesolo1' (Comodel Host :
+#                        velocesolo) ...
+# Info!     [TCLC-5502]: : Successfully connected to emulator.
+# Info!     [TCLC-5501]: : project database locked.
+# Info!     [TCLC-5501]: : Trace mode is set to SSR
+Veloce 1> # Connected to emulator velocesolo1
+# Info!     [RTS-20013]: : Configuring the design.
+# Info!     [RTS-20014]: : Resource reservation started ...
+# Info!     [RTS-20014]: : Resource reservation done (time taken 0.03 s)
+# Info!     [RTS-20015]: : Resource initialization started ...
+# Info!                : : Reservation of AVB[0] UCK[1] CCH[0] without remapping
+#                       
+# Info!     [RTS-20110]: : Waiting for EHS-EDS connection to establish...
+# Info!     [RTS-20110]: : EHS-EDS connection established. (time taken 1.10 s)
+# Info!     [RTS-20018]: : Freeze design for setup started ...
+# Info!     [RTS-20015]: : Resource initialization done (time taken 13.01 s)
+# Info!     [RTS-20018]: : Freeze design for setup done (time taken 0.12 s)
+# Info!     [RTS-20016]: : Trace system turn on started ...
+# Info!     [RTS-20016]: : Trace system turn on done (time taken 0.36 s)
+# Info!     [RTS-20019]: : Clock routing started ...
+# Info!     [RTS-20019]: : Clock routing done (time taken 0.00 s)
+# Info!     [RTS-20032]: : Clock:simple_alu_tb_dpi.Uclock Domain=0 Freq=1851.9 kHz
+#                        (Hi=24 Lo=30)
+# Info!     [RTS-20024]: : Reset all used memories started ...
+# Info!     [RTS-20024]: : Reset all used memories done (time taken 0.01 s)
+# Info!       [CS-5156]: : Collecting memory contents from 'rtlc generated mem cont file'.
+# Info!     [RTS-20021]: : Memory initialization started ...
+# Info!     [RTS-20021]: : Memory initialization done (time taken 0.00 s)
+# Info!     [RTS-20022]: : User state initialization started ...
+# Info!     [RTS-20022]: : User state initialization done (time taken 3.24 s)
+# Info!     [RTS-20044]: : Store Interrupt config started ...
+# Info!     [RTS-20066]: : Trigger position: 50, Total trace depth: 64512 cycles.
+# Info!     [RTS-20044]: : Store Interrupt config done (time taken 3.62 s)
+# Info!     [RTS-20016]: : Trace system turn on started ...
+# Info!     [RTS-20016]: : Trace system turn on done (time taken 0.04 s)
+# Info!     [TCLC-5502]: : Design configured successfully.
+# Info!     [RTS-20067]: : Load Breakpoint/Event done (time taken 0.00 s)
+# Info!     [TCLC-5651]: : Configure/Design download time: 0:00:21
+Veloce 1> # Design configured
+# Info! : : Launching Comodel Client '/u/bhunt2/Repos/ECE510-EFV/HW/HW3/SimpleALU_DPI/veloce.med/bin/linux_el30_gnu45/testbench.veloce' on host 'velocesolo'. Please wait...
+# 
+#                          TBX Software Version 3.0.0.7.2
+#                 Copyright 2003-2014 Mentor Graphics Corporation
+#                               All Rights Reserved
+# 
+# 
+# Info!     [TBXR-6579]: : Initializing...
+# Info!     [TCLC-5501]: : Waiting for project open from master client...
+# Info!     [TCLC-5614]: : Project already open. Owner is "bhunt2" and HostName
+#                        "velocesolo.ece.pdx.edu" Attached to existing session
+# Info!     [TCLC-5501]: : Single User Mode. Other users will not be able to
+#                        attach to this session.
+# Comodel client with pid "23966" has been launched on host "velocesolo" from directory "/u/bhunt2/Repos/ECE510-EFV/HW/HW3/SimpleALU_DPI".
+# Info!     [TBXR-6571]: : TAPI slot number used : 1
+# Info!     [TCLC-5654]: : Will work with the clock "simple_alu_tb_dpi.Uclock"
+# 
+# Info!     [TBXR-6573]: : Starting up clocks...
+# Info!     [TBXR-6576]: : Creating 256 bit write channel...
+# Info!     [TBXR-6576]: : Creating 640 bit read channel...
+# Info!     [TBXR-6580]: : Initialization complete.
+# Info!     [TCLC-5654]: : Will work with the clock "simple_alu_tb_dpi.Uclock"
+# 
+# 
+# Info!     [TCLC-5654]: : Will work with the clock "simple_alu_tb_dpi.Uclock"
+# Info!     [TCLC-5501]: : Emulation started.
+# 
+#     RESET signal has been asserted ....
+#     Starting processing ...............
+# 
+# All tests passed!
+# =============================================================================
+#                             SIMULATION STATISTICS                            
+# =============================================================================
+# Simulation finished at time 28390
+# 
+# Total number of TBX clocks:                                      99480
+# Total number of TBX clocks spent in HDL time advancement:        2839
+# Total number of TBX clocks spent in HDL due to callee execution: 0
+# Percentage TBX clocks spent in HDL time advance:                 2.85 %
+# -----------------------------------------------------------------------------
+# Total CPU time (user mode):                                      2.72 seconds.
+# Total time spent:                                                4.71 seconds.
+# -----------------------------------------------------------------------------
+# 
+# Info!     [TCLC-5501]: : Emulation stopped.
+# Info!     [TCLC-5501]: : Current Simulation Time: 28390 ps
+# Info!     [TCLC-5501]: : 30225 cycles run. Clock : simple_alu_tb_dpi.Uclock.
+# Info!     [TCLC-5501]: : 101433 cycles run till now. Clock :
+#                        simple_alu_tb_dpi.Uclock
+# 
+# Info! : : Quitting Comodel Client
+# Comodel application with pid "23966" exited successfully with exit code "0".
+# Info!     [TCLC-5501]: : Disconnected from emulator.
+# Info!     [TCLC-5501]: : project database unlocked.
+# Info!     [TCLC-5663]: : Shutting down the user runtime session.
+# Info!     [TCLC-5501]: : Project closed successfully
