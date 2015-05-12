@@ -25,17 +25,17 @@
 Veloce 1> # Connected to emulator velocesolo1
 # Info!     [RTS-20013]: : Configuring the design.
 # Info!     [RTS-20014]: : Resource reservation started ...
-# Info!     [RTS-20014]: : Resource reservation done (time taken 0.04 s)
+# Info!     [RTS-20014]: : Resource reservation done (time taken 0.03 s)
 # Info!     [RTS-20015]: : Resource initialization started ...
 # Info!                : : Reservation of AVB[0] UCK[1] CCH[0] without remapping
 #                       
 # Info!     [RTS-20110]: : Waiting for EHS-EDS connection to establish...
-# Info!     [RTS-20110]: : EHS-EDS connection established. (time taken 1.09 s)
+# Info!     [RTS-20110]: : EHS-EDS connection established. (time taken 1.10 s)
 # Info!     [RTS-20018]: : Freeze design for setup started ...
-# Info!     [RTS-20015]: : Resource initialization done (time taken 12.74 s)
+# Info!     [RTS-20015]: : Resource initialization done (time taken 13.01 s)
 # Info!     [RTS-20018]: : Freeze design for setup done (time taken 0.12 s)
 # Info!     [RTS-20016]: : Trace system turn on started ...
-# Info!     [RTS-20016]: : Trace system turn on done (time taken 0.27 s)
+# Info!     [RTS-20016]: : Trace system turn on done (time taken 0.36 s)
 # Info!     [RTS-20019]: : Clock routing started ...
 # Info!     [RTS-20019]: : Clock routing done (time taken 0.00 s)
 # Info!     [RTS-20032]: : Clock:simple_alu_tb_dpi.Uclock Domain=0 Freq=1851.9 kHz
@@ -46,15 +46,15 @@ Veloce 1> # Connected to emulator velocesolo1
 # Info!     [RTS-20021]: : Memory initialization started ...
 # Info!     [RTS-20021]: : Memory initialization done (time taken 0.00 s)
 # Info!     [RTS-20022]: : User state initialization started ...
-# Info!     [RTS-20022]: : User state initialization done (time taken 3.35 s)
+# Info!     [RTS-20022]: : User state initialization done (time taken 3.24 s)
 # Info!     [RTS-20044]: : Store Interrupt config started ...
 # Info!     [RTS-20066]: : Trigger position: 50, Total trace depth: 64512 cycles.
-# Info!     [RTS-20044]: : Store Interrupt config done (time taken 3.72 s)
+# Info!     [RTS-20044]: : Store Interrupt config done (time taken 3.62 s)
 # Info!     [RTS-20016]: : Trace system turn on started ...
 # Info!     [RTS-20016]: : Trace system turn on done (time taken 0.04 s)
 # Info!     [TCLC-5502]: : Design configured successfully.
 # Info!     [RTS-20067]: : Load Breakpoint/Event done (time taken 0.00 s)
-# Info!     [TCLC-5651]: : Configure/Design download time: 0:00:20
+# Info!     [TCLC-5651]: : Configure/Design download time: 0:00:21
 Veloce 1> # Design configured
 # Info! : : Launching Comodel Client '/u/bhunt2/Repos/ECE510-EFV/HW/HW3/SimpleALU_DPI/veloce.med/bin/linux_el30_gnu45/testbench.veloce' on host 'velocesolo'. Please wait...
 # 
@@ -69,7 +69,7 @@ Veloce 1> # Design configured
 #                        "velocesolo.ece.pdx.edu" Attached to existing session
 # Info!     [TCLC-5501]: : Single User Mode. Other users will not be able to
 #                        attach to this session.
-# Comodel client with pid "7385" has been launched on host "velocesolo" from directory "/u/bhunt2/Repos/ECE510-EFV/HW/HW3/SimpleALU_DPI".
+# Comodel client with pid "23966" has been launched on host "velocesolo" from directory "/u/bhunt2/Repos/ECE510-EFV/HW/HW3/SimpleALU_DPI".
 # Info!     [TBXR-6571]: : TAPI slot number used : 1
 # Info!     [TCLC-5654]: : Will work with the clock "simple_alu_tb_dpi.Uclock"
 # 
@@ -86,532 +86,29 @@ Veloce 1> # Design configured
 #     RESET signal has been asserted ....
 #     Starting processing ...............
 # 
-# Info: operandA=0 operandB=0 opcode=0 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=0 opcode=0 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=0 opcode=0 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=0 opcode=0 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=0 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=0 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=0 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=0 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=0 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=0 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=0 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=0 opcode=0 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=0 opcode=0 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=0 opcode=0 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=0 opcode=0 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=0 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=0 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=0 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=0 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=0 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=0 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=1 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=0 operandB=1 opcode=0 Expected Result=1 Obtained Result=1
-# Info: operandA=1 operandB=1 opcode=0 Expected Result=2 Obtained Result=2
-# Info: operandA=2 operandB=1 opcode=0 Expected Result=3 Obtained Result=3
-# Info: operandA=3 operandB=1 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=4 operandB=1 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=5 operandB=1 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=6 operandB=1 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=7 operandB=1 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=8 operandB=1 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=9 operandB=1 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=10 operandB=2 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=0 operandB=2 opcode=0 Expected Result=2 Obtained Result=2
-# Info: operandA=1 operandB=2 opcode=0 Expected Result=3 Obtained Result=3
-# Info: operandA=2 operandB=2 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=3 operandB=2 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=4 operandB=2 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=5 operandB=2 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=6 operandB=2 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=7 operandB=2 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=8 operandB=2 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=9 operandB=2 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=10 operandB=3 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=0 operandB=3 opcode=0 Expected Result=3 Obtained Result=3
-# Info: operandA=1 operandB=3 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=2 operandB=3 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=3 operandB=3 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=4 operandB=3 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=5 operandB=3 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=6 operandB=3 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=7 operandB=3 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=8 operandB=3 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=9 operandB=3 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=10 operandB=4 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=0 operandB=4 opcode=0 Expected Result=4 Obtained Result=4
-# Info: operandA=1 operandB=4 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=2 operandB=4 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=3 operandB=4 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=4 operandB=4 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=5 operandB=4 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=6 operandB=4 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=7 operandB=4 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=8 operandB=4 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=9 operandB=4 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=10 operandB=5 opcode=0 Expected Result=15 Obtained Result=15
-# Info: operandA=0 operandB=5 opcode=0 Expected Result=5 Obtained Result=5
-# Info: operandA=1 operandB=5 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=2 operandB=5 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=3 operandB=5 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=4 operandB=5 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=5 operandB=5 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=6 operandB=5 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=7 operandB=5 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=8 operandB=5 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=9 operandB=5 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=10 operandB=6 opcode=0 Expected Result=16 Obtained Result=16
-# Info: operandA=0 operandB=6 opcode=0 Expected Result=6 Obtained Result=6
-# Info: operandA=1 operandB=6 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=2 operandB=6 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=3 operandB=6 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=4 operandB=6 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=5 operandB=6 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=6 operandB=6 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=7 operandB=6 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=8 operandB=6 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=9 operandB=6 opcode=0 Expected Result=15 Obtained Result=15
-# Info: operandA=10 operandB=7 opcode=0 Expected Result=17 Obtained Result=17
-# Info: operandA=0 operandB=7 opcode=0 Expected Result=7 Obtained Result=7
-# Info: operandA=1 operandB=7 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=2 operandB=7 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=3 operandB=7 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=4 operandB=7 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=5 operandB=7 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=6 operandB=7 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=7 operandB=7 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=8 operandB=7 opcode=0 Expected Result=15 Obtained Result=15
-# Info: operandA=9 operandB=7 opcode=0 Expected Result=16 Obtained Result=16
-# Info: operandA=10 operandB=8 opcode=0 Expected Result=18 Obtained Result=18
-# Info: operandA=0 operandB=8 opcode=0 Expected Result=8 Obtained Result=8
-# Info: operandA=1 operandB=8 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=2 operandB=8 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=3 operandB=8 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=4 operandB=8 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=5 operandB=8 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=6 operandB=8 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=7 operandB=8 opcode=0 Expected Result=15 Obtained Result=15
-# Info: operandA=8 operandB=8 opcode=0 Expected Result=16 Obtained Result=16
-# Info: operandA=9 operandB=8 opcode=0 Expected Result=17 Obtained Result=17
-# Info: operandA=10 operandB=9 opcode=0 Expected Result=19 Obtained Result=19
-# Info: operandA=0 operandB=9 opcode=0 Expected Result=9 Obtained Result=9
-# Info: operandA=1 operandB=9 opcode=0 Expected Result=10 Obtained Result=10
-# Info: operandA=2 operandB=9 opcode=0 Expected Result=11 Obtained Result=11
-# Info: operandA=3 operandB=9 opcode=0 Expected Result=12 Obtained Result=12
-# Info: operandA=4 operandB=9 opcode=0 Expected Result=13 Obtained Result=13
-# Info: operandA=5 operandB=9 opcode=0 Expected Result=14 Obtained Result=14
-# Info: operandA=6 operandB=9 opcode=0 Expected Result=15 Obtained Result=15
-# Info: operandA=7 operandB=9 opcode=0 Expected Result=16 Obtained Result=16
-# Info: operandA=8 operandB=9 opcode=0 Expected Result=17 Obtained Result=17
-# Info: operandA=9 operandB=9 opcode=0 Expected Result=18 Obtained Result=18
-# Info: operandA=10 operandB=10 opcode=0 Expected Result=20 Obtained Result=20
-# Info: operandA=0 operandB=10 opcode=1 Expected Result=-10 Obtained Result=-10
-# Info: operandA=1 operandB=10 opcode=1 Expected Result=-9 Obtained Result=-9
-# Info: operandA=2 operandB=10 opcode=1 Expected Result=-8 Obtained Result=-8
-# Info: operandA=3 operandB=10 opcode=1 Expected Result=-7 Obtained Result=-7
-# Info: operandA=4 operandB=10 opcode=1 Expected Result=-6 Obtained Result=-6
-# Info: operandA=5 operandB=10 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=6 operandB=10 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=7 operandB=10 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=8 operandB=10 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=9 operandB=10 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=10 operandB=0 opcode=1 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=0 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=0 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=0 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=0 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=0 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=0 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=0 opcode=1 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=0 opcode=1 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=0 opcode=1 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=0 opcode=1 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=1 opcode=1 Expected Result=9 Obtained Result=9
-# Info: operandA=0 operandB=1 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=1 operandB=1 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=1 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=3 operandB=1 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=4 operandB=1 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=5 operandB=1 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=6 operandB=1 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=7 operandB=1 opcode=1 Expected Result=6 Obtained Result=6
-# Info: operandA=8 operandB=1 opcode=1 Expected Result=7 Obtained Result=7
-# Info: operandA=9 operandB=1 opcode=1 Expected Result=8 Obtained Result=8
-# Info: operandA=10 operandB=2 opcode=1 Expected Result=8 Obtained Result=8
-# Info: operandA=0 operandB=2 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=1 operandB=2 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=2 operandB=2 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=2 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=4 operandB=2 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=5 operandB=2 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=6 operandB=2 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=7 operandB=2 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=8 operandB=2 opcode=1 Expected Result=6 Obtained Result=6
-# Info: operandA=9 operandB=2 opcode=1 Expected Result=7 Obtained Result=7
-# Info: operandA=10 operandB=3 opcode=1 Expected Result=7 Obtained Result=7
-# Info: operandA=0 operandB=3 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=1 operandB=3 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=2 operandB=3 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=3 operandB=3 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=4 operandB=3 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=5 operandB=3 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=6 operandB=3 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=7 operandB=3 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=8 operandB=3 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=9 operandB=3 opcode=1 Expected Result=6 Obtained Result=6
-# Info: operandA=10 operandB=4 opcode=1 Expected Result=6 Obtained Result=6
-# Info: operandA=0 operandB=4 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=1 operandB=4 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=2 operandB=4 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=3 operandB=4 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=4 operandB=4 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=4 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=6 operandB=4 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=7 operandB=4 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=8 operandB=4 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=9 operandB=4 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=10 operandB=5 opcode=1 Expected Result=5 Obtained Result=5
-# Info: operandA=0 operandB=5 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=1 operandB=5 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=2 operandB=5 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=3 operandB=5 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=4 operandB=5 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=5 operandB=5 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=6 operandB=5 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=7 operandB=5 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=8 operandB=5 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=9 operandB=5 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=10 operandB=6 opcode=1 Expected Result=4 Obtained Result=4
-# Info: operandA=0 operandB=6 opcode=1 Expected Result=-6 Obtained Result=-6
-# Info: operandA=1 operandB=6 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=2 operandB=6 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=3 operandB=6 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=4 operandB=6 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=5 operandB=6 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=6 operandB=6 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=7 operandB=6 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=8 operandB=6 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=9 operandB=6 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=10 operandB=7 opcode=1 Expected Result=3 Obtained Result=3
-# Info: operandA=0 operandB=7 opcode=1 Expected Result=-7 Obtained Result=-7
-# Info: operandA=1 operandB=7 opcode=1 Expected Result=-6 Obtained Result=-6
-# Info: operandA=2 operandB=7 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=3 operandB=7 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=4 operandB=7 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=5 operandB=7 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=6 operandB=7 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=7 operandB=7 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=8 operandB=7 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=9 operandB=7 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=10 operandB=8 opcode=1 Expected Result=2 Obtained Result=2
-# Info: operandA=0 operandB=8 opcode=1 Expected Result=-8 Obtained Result=-8
-# Info: operandA=1 operandB=8 opcode=1 Expected Result=-7 Obtained Result=-7
-# Info: operandA=2 operandB=8 opcode=1 Expected Result=-6 Obtained Result=-6
-# Info: operandA=3 operandB=8 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=4 operandB=8 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=5 operandB=8 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=6 operandB=8 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=7 operandB=8 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=8 operandB=8 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=8 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=10 operandB=9 opcode=1 Expected Result=1 Obtained Result=1
-# Info: operandA=0 operandB=9 opcode=1 Expected Result=-9 Obtained Result=-9
-# Info: operandA=1 operandB=9 opcode=1 Expected Result=-8 Obtained Result=-8
-# Info: operandA=2 operandB=9 opcode=1 Expected Result=-7 Obtained Result=-7
-# Info: operandA=3 operandB=9 opcode=1 Expected Result=-6 Obtained Result=-6
-# Info: operandA=4 operandB=9 opcode=1 Expected Result=-5 Obtained Result=-5
-# Info: operandA=5 operandB=9 opcode=1 Expected Result=-4 Obtained Result=-4
-# Info: operandA=6 operandB=9 opcode=1 Expected Result=-3 Obtained Result=-3
-# Info: operandA=7 operandB=9 opcode=1 Expected Result=-2 Obtained Result=-2
-# Info: operandA=8 operandB=9 opcode=1 Expected Result=-1 Obtained Result=-1
-# Info: operandA=9 operandB=9 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=10 operandB=10 opcode=1 Expected Result=0 Obtained Result=0
-# Info: operandA=0 operandB=10 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=10 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=10 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=10 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=4 operandB=10 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=10 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=6 operandB=10 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=7 operandB=10 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=8 operandB=10 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=10 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=10 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=0 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=4 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=6 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=7 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=8 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=0 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=10 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=0 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=1 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=1 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=4 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=1 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=6 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=7 operandB=1 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=8 operandB=1 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=1 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=10 operandB=2 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=0 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=2 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=2 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=4 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=6 operandB=2 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=7 operandB=2 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=8 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=2 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=10 operandB=3 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=0 operandB=3 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=3 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=3 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=3 opcode=2 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=3 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=3 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=6 operandB=3 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=7 operandB=3 opcode=2 Expected Result=3 Obtained Result=3
-# Info: operandA=8 operandB=3 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=3 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=10 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=0 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=4 operandB=4 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=4 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=6 operandB=4 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=7 operandB=4 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=8 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=4 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=10 operandB=5 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=0 operandB=5 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=5 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=5 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=5 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=4 operandB=5 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=5 opcode=2 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=5 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=7 operandB=5 opcode=2 Expected Result=5 Obtained Result=5
-# Info: operandA=8 operandB=5 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=5 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=10 operandB=6 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=0 operandB=6 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=6 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=6 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=6 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=4 operandB=6 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=6 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=6 operandB=6 opcode=2 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=6 opcode=2 Expected Result=6 Obtained Result=6
-# Info: operandA=8 operandB=6 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=6 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=10 operandB=7 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=0 operandB=7 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=7 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=7 opcode=2 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=7 opcode=2 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=7 opcode=2 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=7 opcode=2 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=7 opcode=2 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=7 opcode=2 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=7 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=9 operandB=7 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=10 operandB=8 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=0 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=2 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=4 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=6 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=7 operandB=8 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=8 operandB=8 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=8 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=10 operandB=9 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=0 operandB=9 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=9 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=9 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=3 operandB=9 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=4 operandB=9 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=5 operandB=9 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=6 operandB=9 opcode=2 Expected Result=0 Obtained Result=0
-# Info: operandA=7 operandB=9 opcode=2 Expected Result=1 Obtained Result=1
-# Info: operandA=8 operandB=9 opcode=2 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=9 opcode=2 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=10 opcode=2 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=10 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=1 operandB=10 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=2 operandB=10 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=3 operandB=10 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=4 operandB=10 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=5 operandB=10 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=6 operandB=10 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=7 operandB=10 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=8 operandB=10 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=9 operandB=10 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=10 operandB=0 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=0 opcode=3 Expected Result=0 Obtained Result=0
-# Info: operandA=1 operandB=0 opcode=3 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=0 opcode=3 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=0 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=0 opcode=3 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=0 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=0 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=0 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=0 opcode=3 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=0 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=1 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=0 operandB=1 opcode=3 Expected Result=1 Obtained Result=1
-# Info: operandA=1 operandB=1 opcode=3 Expected Result=1 Obtained Result=1
-# Info: operandA=2 operandB=1 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=3 operandB=1 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=1 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=5 operandB=1 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=1 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=7 operandB=1 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=1 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=9 operandB=1 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=2 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=2 opcode=3 Expected Result=2 Obtained Result=2
-# Info: operandA=1 operandB=2 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=2 operandB=2 opcode=3 Expected Result=2 Obtained Result=2
-# Info: operandA=3 operandB=2 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=2 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=5 operandB=2 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=6 operandB=2 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=2 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=2 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=9 operandB=2 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=10 operandB=3 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=0 operandB=3 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=1 operandB=3 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=2 operandB=3 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=3 operandB=3 opcode=3 Expected Result=3 Obtained Result=3
-# Info: operandA=4 operandB=3 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=5 operandB=3 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=6 operandB=3 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=7 operandB=3 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=3 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=9 operandB=3 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=10 operandB=4 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=0 operandB=4 opcode=3 Expected Result=4 Obtained Result=4
-# Info: operandA=1 operandB=4 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=2 operandB=4 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=3 operandB=4 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=4 operandB=4 opcode=3 Expected Result=4 Obtained Result=4
-# Info: operandA=5 operandB=4 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=4 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=4 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=4 opcode=3 Expected Result=12 Obtained Result=12
-# Info: operandA=9 operandB=4 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=10 operandB=5 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=0 operandB=5 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=1 operandB=5 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=2 operandB=5 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=3 operandB=5 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=4 operandB=5 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=5 operandB=5 opcode=3 Expected Result=5 Obtained Result=5
-# Info: operandA=6 operandB=5 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=7 operandB=5 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=5 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=9 operandB=5 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=10 operandB=6 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=0 operandB=6 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=1 operandB=6 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=2 operandB=6 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=3 operandB=6 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=4 operandB=6 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=5 operandB=6 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=6 operandB=6 opcode=3 Expected Result=6 Obtained Result=6
-# Info: operandA=7 operandB=6 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=6 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=9 operandB=6 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=10 operandB=7 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=0 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=1 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=2 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=3 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=4 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=5 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=6 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=7 operandB=7 opcode=3 Expected Result=7 Obtained Result=7
-# Info: operandA=8 operandB=7 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=9 operandB=7 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=10 operandB=8 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=0 operandB=8 opcode=3 Expected Result=8 Obtained Result=8
-# Info: operandA=1 operandB=8 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=2 operandB=8 opcode=3 Expected Result=10 Obtained Result=10
-# Info: operandA=3 operandB=8 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=4 operandB=8 opcode=3 Expected Result=12 Obtained Result=12
-# Info: operandA=5 operandB=8 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=6 operandB=8 opcode=3 Expected Result=14 Obtained Result=14
-# Info: operandA=7 operandB=8 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=8 operandB=8 opcode=3 Expected Result=8 Obtained Result=8
-# Info: operandA=9 operandB=8 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=9 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=0 operandB=9 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=1 operandB=9 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=2 operandB=9 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=3 operandB=9 opcode=3 Expected Result=11 Obtained Result=11
-# Info: operandA=4 operandB=9 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=5 operandB=9 opcode=3 Expected Result=13 Obtained Result=13
-# Info: operandA=6 operandB=9 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=7 operandB=9 opcode=3 Expected Result=15 Obtained Result=15
-# Info: operandA=8 operandB=9 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=9 operandB=9 opcode=3 Expected Result=9 Obtained Result=9
-# Info: operandA=10 operandB=10 opcode=3 Expected Result=10 Obtained Result=10
-# Error: operandA=0 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=10
-# Info: operandA=0 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=10
-# Error: operandA=1 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=11
-# Info: operandA=1 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=11
-# Error: operandA=2 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=12
-# Info: operandA=2 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=12
-# Error: operandA=3 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=13
-# Info: operandA=3 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=13
-# Error: operandA=4 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=14
-# Info: operandA=4 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=14
-# Error: operandA=5 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=15
-# Info: operandA=5 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=15
-# Error: operandA=6 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=16
-# Info: operandA=6 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=16
-# Error: operandA=7 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=17
-# Info: operandA=7 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=17
-# Error: operandA=8 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=18
-# Info: operandA=8 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=18
-# Error: operandA=9 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=19
-# Info: operandA=9 operandB=10 opcode=4 Expected Result=-3813124 Obtained Result=19
-# 10 Tests Failed :(=============================================================================
+# All tests passed!
+# =============================================================================
 #                             SIMULATION STATISTICS                            
 # =============================================================================
-# Simulation finished at time 29650
+# Simulation finished at time 28390
 # 
-# Total number of TBX clocks:                                      181630
-# Total number of TBX clocks spent in HDL time advancement:        2965
+# Total number of TBX clocks:                                      99480
+# Total number of TBX clocks spent in HDL time advancement:        2839
 # Total number of TBX clocks spent in HDL due to callee execution: 0
-# Percentage TBX clocks spent in HDL time advance:                 1.63 %
+# Percentage TBX clocks spent in HDL time advance:                 2.85 %
 # -----------------------------------------------------------------------------
-# Total CPU time (user mode):                                      2.84 seconds.
-# Total time spent:                                                4.82 seconds.
+# Total CPU time (user mode):                                      2.72 seconds.
+# Total time spent:                                                4.71 seconds.
 # -----------------------------------------------------------------------------
 # 
 # Info!     [TCLC-5501]: : Emulation stopped.
-# Info!     [TCLC-5501]: : Current Simulation Time: 29650 ps
-# Info!     [TCLC-5501]: : 108858 cycles run. Clock : simple_alu_tb_dpi.Uclock.
-# Info!     [TCLC-5501]: : 182284 cycles run till now. Clock :
+# Info!     [TCLC-5501]: : Current Simulation Time: 28390 ps
+# Info!     [TCLC-5501]: : 30225 cycles run. Clock : simple_alu_tb_dpi.Uclock.
+# Info!     [TCLC-5501]: : 101433 cycles run till now. Clock :
 #                        simple_alu_tb_dpi.Uclock
 # 
 # Info! : : Quitting Comodel Client
-# Comodel application with pid "7385" exited successfully with exit code "0".
+# Comodel application with pid "23966" exited successfully with exit code "0".
 # Info!     [TCLC-5501]: : Disconnected from emulator.
 # Info!     [TCLC-5501]: : project database unlocked.
 # Info!     [TCLC-5663]: : Shutting down the user runtime session.

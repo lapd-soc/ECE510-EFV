@@ -6,7 +6,7 @@ using namespace std;
 #include "svdpi.h"
 #include "stdio.h"
  
-#define debug 1
+#define debug 0
 
 static int CountA = 0 ;
 static int CountB = 0;
@@ -35,8 +35,8 @@ int GetDataFromSoftware( svBitVecVal* data1, svBitVecVal* data2, svBitVecVal* da
     
     if(CountA == 11)
     {
-	operandB = CountB++;
-	CountA = 0;
+		operandB = CountB++;
+		CountA = 0;
     }
     
     if(CountB == 11)
@@ -53,7 +53,7 @@ int GetDataFromSoftware( svBitVecVal* data1, svBitVecVal* data2, svBitVecVal* da
     *data2 = operandB;
     *data3 = opcode;
     
-    if(opcode == 4 && CountA == 10)
+    if(opcode == 3 && CountB == 10)
     	*isMoreData = 0;
 
     
