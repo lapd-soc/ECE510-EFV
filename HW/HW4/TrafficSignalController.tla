@@ -1,49 +1,51 @@
 ---------------------- MODULE TrafficSignalController ----------------------
 (* Design based on traffic_light8 *)
-(* Add greenTimer for each direction *)
 EXTENDS Naturals, TLC
-CONSTANT GreenTimerMAX, Directions, AccidentTimer
-VARIABLE lights, greenTimer
+CONSTANT Directions
+VARIABLE lights, clock
 
 
+TypeInvariant == /\ lights \in [Directions -> {"red", "green", "yellow"}]
+                 /\ clock \in Nat
 
-Init == /\ lights = [dir \in Directions|-> "red" ]  
-        /\ greenTimer = 0
-        /\ AccidentTimer = 0                
-            
-         
-TypeInvariant == /\ lights \in [Directions -> {"red", "green", "yellow"}] 
-                 /\ greenTimer \in [Directions -> Nat]
-                                    
+Init == /\ lights = [dir \in Directions|-> "red" ]
+        /\ clock = 1
+   
 LightGreen(dir) == 
   /\ lights[dir] = "green"
-  /\ lights'     = IF greenTimer = 0 THEN [lights EXCEPT ![dir] = "yellow"] ELSE lights
-  /\ greenTimer[dir]' = IF greenTimer > 0 THEN greenTimer-1 ELSE 0
+  /\ lights'     = [lights EXCEPT ![dir] = "yellow"]
   
 LightYellow(dir) ==
    /\ lights[dir] = "yellow"
    /\ lights'     = [lights EXCEPT ![dir] = "red"]
-   /\ UNCHANGED greenTimer   
 
 LightRed(dir)    == 
    /\ lights[dir] = "red"
    /\ lights'     = [lights EXCEPT ![dir] = "green"]
-   /\ greenTimer[dir]' = GreenTimerMAX
+   
+NextClock == clock' = (clock % 10) + 1
     
-DirectionNext(dir) == LightGreen(dir) \/ LightYellow(dir) \/ LightRed(dir)
+DirectionNext(dir) == \/ LightGreen(dir)
+                      \/ LightYellow(dir)
+                      \/ LightRed(dir)
+
+NoAccident == \A i \in Directions :  ( \/ (lights[i] = "green")
+                                       \/ (lights[i] = "yellow") )=>
+              \A j \in Directions:     \/ i=j 
+                                       \/ lights[j] = "red"
 
 Next == /\ (\E dir \in Directions: DirectionNext(dir))
         /\ PrintT(lights)
-    
-NoAccident == \A i \in Directions :  ( \/ (lights[i] = "green") \/ (lights[i] = "yellow") )=> \A j \in Directions: 
-                    \/ i=j 
-                    \/ lights[j] = "red"
-             
-          
-Spec == Init /\ [][Next]_<<lights,greenTimer>>
+        /\ PrintT(NoAccident)
+        /\ NextClock
+   
+Accident(t) ==  (     clock > t
+                  /\  NoAccident = TRUE )
+
+Spec == Init /\ [][Next]_<<lights,clock>>
 -----------------------------------------------------------------------------
 THEOREM Spec => []TypeInvariant
 =============================================================================
 \* Modification History
-\* Last modified Mon May 25 12:53:43 PDT 2015 by Me
+\* Last modified Mon May 25 16:37:19 PDT 2015 by Me
 \* Created Thu May 21 17:58:40 PDT 2015 by Me
