@@ -1,53 +1,59 @@
 ----------------------- MODULE SimpleElevatorControl -----------------------
 EXTENDS Naturals, TLC
 CONSTANT TotalFloors
-VARIABLE elevator, request
+VARIABLE elevator, request, servicingRequest
 
 
 TypeInvariant == /\ elevator \in [ floor : (1 .. TotalFloors), available : {TRUE,FALSE} ]
                  /\ request \in [ (1 .. TotalFloors) -> {TRUE,FALSE} ]
+                 /\ servicingRequest \in {TRUE,FALSE}
 ------------------------------------------------------------------------------
 Init == /\ TypeInvariant
         /\ elevator.floor = 1
         /\ elevator.available = TRUE
-        /\ request = [ req \in (1 .. TotalFloors) |-> FALSE ]
+        /\ request = [ req \in (1 .. TotalFloors) |-> TRUE ]
+        /\ servicingRequest = FALSE
 
 
 NextAvailable(req) ==
     /\ elevator.available = FALSE
     /\ elevator' = IF elevator.floor = req THEN [elevator EXCEPT !.availabe = TRUE]
                                            ELSE elevator
-
-NextFloor(req) ==
-    /\ elevator.available = TRUE
-    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.floor = req]
-                                          ELSE elevator
-
+    /\ servicingRequest' = IF elevator.floor = req THEN FALSE
+                                                   ELSE servicingRequest
+                                           
 NextElevator(req) ==
     /\ elevator.available = TRUE
+    /\ servicingRequest' = FALSE
     /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.available = FALSE]
                                           ELSE elevator
+    /\ request' = IF request[req] = TRUE THEN [request EXCEPT ![req] = FALSE]
+                                         ELSE request
 
+NextFloor(req) ==
+    /\ servicingRequest = TRUE
+    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.floor = req]
+                                          ELSE elevator
+(*
 NextRequest(req) == 
     /\ elevator.available = TRUE
     /\ request' = [ request EXCEPT ![req] = TRUE ]
-
+*)
 NextOperation(req) == 
     \/ NextAvailable(req)
     \/ NextFloor(req)
     \/ NextElevator(req)
-    \/ NextRequest(req)
 
 Next == /\ (\E req \in (1..TotalFloors): NextOperation(req))
         /\ PrintT(elevator)
 
 
-Spec == Init /\ [][Next]_<<elevator, request>>
+Spec == Init /\ [][Next]_<<elevator, request, servicingRequest>>
 -----------------------------------------------------------------------------
 THEOREM Spec => TypeInvariant
 =============================================================================
 \* Modification History
-\* Last modified Thu May 28 10:24:08 PDT 2015 by Me
+\* Last modified Thu May 28 11:02:39 PDT 2015 by Me
 \* Created Tue May 26 16:13:01 PDT 2015 by Me
 
 (*
