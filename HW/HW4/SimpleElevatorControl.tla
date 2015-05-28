@@ -4,7 +4,7 @@ CONSTANT TotalFloors
 VARIABLE elevator, request
 
 
-TypeInvariant == /\ elevator \in [floor : (1 .. TotalFloors), available : {TRUE,FALSE} ]
+TypeInvariant == /\ elevator \in [ floor : (1 .. TotalFloors), available : {TRUE,FALSE} ]
                  /\ request \in [ (1 .. TotalFloors) -> {TRUE,FALSE} ]
 ------------------------------------------------------------------------------
 Init == /\ TypeInvariant
@@ -13,19 +13,29 @@ Init == /\ TypeInvariant
         /\ request = [ req \in (1 .. TotalFloors) |-> FALSE ]
 
 
+NextAvailable(req) ==
+    /\ elevator.available = FALSE
+    /\ elevator' = IF elevator.floor = req THEN [elevator EXCEPT !.availabe = TRUE]
+                                           ELSE elevator
 
 NextFloor(req) ==
     /\ elevator.available = TRUE
-    /\ elevator' = IF request[req] = TRUE THEN [ elevator EXCEPT !.floor = req, !.available = TRUE]
-                                          ELSE elevator 
+    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.floor = req]
+                                          ELSE elevator
+
+NextElevator(req) ==
+    /\ elevator.available = TRUE
+    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.available = FALSE]
+                                          ELSE elevator
 
 NextRequest(req) == 
-    /\ request[req] = TRUE
-    /\ request' = IF elevator.floor = req THEN [request EXCEPT ![req] = FALSE]
-                                          ELSE request = request
+    /\ elevator.available = TRUE
+    /\ request' = [ request EXCEPT ![req] = TRUE ]
 
 NextOperation(req) == 
+    \/ NextAvailable(req)
     \/ NextFloor(req)
+    \/ NextElevator(req)
     \/ NextRequest(req)
 
 Next == /\ (\E req \in (1..TotalFloors): NextOperation(req))
@@ -37,7 +47,7 @@ Spec == Init /\ [][Next]_<<elevator, request>>
 THEOREM Spec => TypeInvariant
 =============================================================================
 \* Modification History
-\* Last modified Thu May 28 09:56:42 PDT 2015 by Me
+\* Last modified Thu May 28 10:24:08 PDT 2015 by Me
 \* Created Tue May 26 16:13:01 PDT 2015 by Me
 
 (*
