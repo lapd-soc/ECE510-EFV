@@ -12,38 +12,36 @@
 *)
 
 EXTENDS Naturals, TLC
-CONSTANT TotalFloors
+CONSTANT TotalElevators, TotalFloors
 VARIABLE elevator, request
 
 
-TypeInvariant == /\ elevator \in [ floor : (1 .. TotalFloors), available : {TRUE,FALSE}, requestedFloor : (0 .. TotalFloors) ]
+TypeInvariant == /\ elevator \in [ (1 .. TotalElevators) -> [ floor : (1 .. TotalFloors), available : {TRUE,FALSE}, requestedFloor : (0 .. TotalFloors) ] ]
                  /\ request \in [ (1 .. TotalFloors) -> {TRUE,FALSE} ]
 
 ------------------------------------------------------------------------------
 Init == /\ TypeInvariant
-        /\ elevator.floor = 1
-        /\ elevator.available = TRUE
-        /\ elevator.requestedFloor = 0
+        /\ elevator = [ elev \in (1..TotalElevators) |-> [elevator EXCEPT !.floor = 1, !.available = TRUE, !.RequestedFloor = 0] ]
         /\ request = [ req \in (1 .. TotalFloors) |-> FALSE ]
 
 
-NextElevator(req) ==
-    /\ elevator.available = TRUE 
-    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT !.available = FALSE, !.requestedFloor = req]
+NextElevator(elev,req) ==
+    /\ (elevator[elev]).available = TRUE 
+    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT ![elev].available = FALSE, ![elev].requestedFloor = req]
                                           ELSE elevator
     /\ request'  = IF request[req] = TRUE THEN [request EXCEPT ![req] = FALSE]
                                           ELSE request
 
-NextFloor ==
-    /\ elevator.available = FALSE
-    /\ elevator' = IF elevator.floor = elevator.requestedFloor      THEN [elevator EXCEPT !.available = TRUE, !.requestedFloor = 0]
-                   ELSE IF elevator.requestedFloor = 0              THEN elevator
-                   ELSE IF elevator.floor > elevator.requestedFloor THEN [elevator EXCEPT !.floor = (elevator.floor % TotalFloors) - 1]
-                   ELSE IF elevator.floor < elevator.requestedFloor THEN [elevator EXCEPT !.floor = (elevator.floor % TotalFloors) + 1]
+NextFloor(elev) ==
+    /\ (elevator[elev]).available = FALSE
+    /\ elevator' = IF (elevator[elev]).floor = (elevator[elev]).requestedFloor      THEN [elevator EXCEPT ![elev].available = TRUE, ![elev].requestedFloor = 0]
+                   ELSE IF (elevator[elev]).requestedFloor = 0              THEN elevator
+                   ELSE IF (elevator[elev]).floor > (elevator[elev]).requestedFloor THEN [elevator EXCEPT ![elev].floor = (elevator[elev].floor % TotalFloors) - 1]
+                   ELSE IF (elevator[elev]).floor < (elevator[elev]).requestedFloor THEN [elevator EXCEPT ![elev].floor = (elevator[elev].floor % TotalFloors) + 1]
                    ELSE elevator
     /\ UNCHANGED request
  
-RequestMade == \A fl \in (1..TotalFloors) : request[fl] = TRUE               
+RequestMade == \A req \in (1..TotalFloors) : request[req] = TRUE               
 
 NextRequest(req) == 
     /\ elevator.available = TRUE
@@ -51,12 +49,13 @@ NextRequest(req) ==
                                          ELSE request
     /\ UNCHANGED elevator
 
-NextOperation(req) ==
-    \/ NextElevator(req)
+NextOperation(elev,req) ==
+    \/ NextElevator(elev,req)
+    \/ NextFloor(elev)
     \/ NextRequest(req)
 
-Next == /\ \/ \E req \in (1..TotalFloors): NextOperation(req)
-           \/ NextFloor
+Next == /\ \E elev \in (1..TotalElevators) : (\E req \in (1..TotalFloors): NextOperation(elev,req))
+           
         /\ PrintT(elevator)
         /\ PrintT(request)
 
@@ -66,5 +65,5 @@ Spec == Init /\ [][Next]_<<elevator, request>>
 THEOREM Spec => TypeInvariant
 =============================================================================
 \* Modification History
-\* Last modified Thu May 28 18:17:12 PDT 2015 by Me
+\* Last modified Thu May 28 18:57:42 PDT 2015 by Me
 \* Created Tue May 26 16:13:01 PDT 2015 by Me
