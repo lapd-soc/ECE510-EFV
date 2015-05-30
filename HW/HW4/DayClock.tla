@@ -1,4 +1,11 @@
 ------------------------------ MODULE DayClock ------------------------------
+(*
+    Statistics:
+        Diameter = 1
+        States Found = 288
+        Distinct States = 144
+*)
+
 EXTENDS Naturals
 VARIABLE hr,dy
 HCini == /\ hr \in (1 .. 24)
@@ -11,5 +18,5 @@ HC    == HCini /\ [][HCnxt]_<<hr,dy>>
 THEOREM HC => []HCini
 =============================================================================
 \* Modification History
-\* Last modified Tue May 19 15:46:12 PDT 2015 by Me
+\* Last modified Fri May 29 23:31:39 PDT 2015 by Me
 \* Created Tue May 19 11:15:18 PDT 2015 by Me

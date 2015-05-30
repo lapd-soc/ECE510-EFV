@@ -1,84 +1,70 @@
--------------------------- MODULE ElevatorControl --------------------------
+----------------------- MODULE ElevatorControl -----------------------
+(*
+1. Loop through elevators (currently only one)
+    a. Is elevator available
+        i. Yes
+            1. Is a request made?
+                a. Yes
+                    i. Make elevator unavailable.
+                    ii. Move elevator to service request
+                b. No, do nothing
+        ii. No, do nothing for that elevator because it is servicing a request
+*)
+
 EXTENDS Naturals, TLC
 CONSTANT TotalElevators, TotalFloors
-VARIABLE elevators, request
+VARIABLE elevator, request
 
 
-TypeInvariant == /\ elevators \in [ (1..TotalElevators) -> [ floor : (1..TotalFloors), available : {TRUE, FALSE} ]]
-                 /\ request   \in [ (1..TotalFloors) -> {TRUE, FALSE} ]
+TypeInvariant == /\ elevator \in [ (1 .. TotalElevators) -> [ floor : (1 .. TotalFloors), available : {TRUE,FALSE}, requestedFloor : (0 .. TotalFloors) ] ]
+                 /\ request \in [ (1 .. TotalFloors) -> {TRUE,FALSE} ]
 
+------------------------------------------------------------------------------
 Init == /\ TypeInvariant
-(*
-        /\ elevators.floor = [e \in TotalElevators |-> 1]
-        /\ elevators.available = [e \in TotalElevators |-> TRUE] 
-  *)      
+        /\ elevator = [ elev \in (1..TotalElevators) |-> [floor |-> 1, available |-> TRUE, requestedFloor |-> 0] ] 
+        /\ request = [ req \in (1 .. TotalFloors) |-> FALSE ]
 
 
+NextElevator( elev,req) ==
+    /\ (elevator[elev]).available = TRUE 
+    /\ elevator' = IF request[req] = TRUE THEN [elevator EXCEPT ![elev].available = FALSE, ![elev].requestedFloor = req]
+                                          ELSE elevator
+    /\ request'  = IF request[req] = TRUE THEN [request EXCEPT ![req] = FALSE]
+                                          ELSE request
 
-ServiceRequested == \A r \in TotalFloors : request[r] = TRUE
+NextFloor(elev) ==
+    /\ (elevator[elev]).available = FALSE
+    /\ elevator' = IF (elevator[elev]).floor = (elevator[elev]).requestedFloor      THEN [elevator EXCEPT ![elev].available = TRUE, ![elev].requestedFloor = 0]
+                   ELSE IF (elevator[elev]).requestedFloor = 0              THEN elevator
+                   ELSE IF (elevator[elev]).floor > (elevator[elev]).requestedFloor THEN [elevator EXCEPT ![elev].floor = (elevator[elev].floor % TotalFloors) - 1]
+                   ELSE IF (elevator[elev]).floor < (elevator[elev]).requestedFloor THEN [elevator EXCEPT ![elev].floor = (elevator[elev].floor % TotalFloors) + 1]
+                   ELSE elevator
+    /\ UNCHANGED request
+ 
+RequestMade == \A req \in (1..TotalFloors) : request[req] = TRUE               
 
-ServiceRequest(req) ==
-    /\ elevators.available[req] 
+NextRequest(elev,req) == 
+    /\ elevator[elev].available = TRUE
+    /\ request' = IF RequestMade = FALSE THEN [ request EXCEPT ![req] = TRUE ]
+                                         ELSE request
+    /\ UNCHANGED elevator
 
-Next == /\ 
-        /\ PrintT(elevators)
+NextOperation(elev,req) ==
+    \/ NextElevator(elev,req)
+    \/ NextFloor(elev)
+    \/ NextRequest(elev,req)
 
-(*
+Next == /\ \E elev \in (1..TotalElevators) : (\E req \in (1..TotalFloors): NextOperation(elev,req))
+           
+        /\ PrintT(elevator)
+        /\ PrintT(request)
 
-TypeInvariant  ==  chan \in [val : Data,  rdy : {0, 1},  ack : {0, 1}]
------------------------------------------------------------------------
-Init  ==  /\ TypeInvariant
-          /\ chan.ack = chan.rdy 
 
-Send(d) ==  /\ chan.rdy = chan.ack
-            /\ chan' = [chan EXCEPT !.val = d, !.rdy = 1 - @]
-
-Rcv     ==  /\ chan.rdy # chan.ack
-            /\ chan' = [chan EXCEPT !.ack = 1 - @]
-
-Next  ==  (\E d \in Data : Send(d)) \/ Rcv
-*)
-
-(*
-Init == /\ lights = [dir \in Directions|-> "red" ]
-        /\ clock = 1
-LightGreen(dir) == 
-  /\ lights[dir] = "green"
-  /\ lights'     = [lights EXCEPT ![dir] = "yellow"]
-  
-LightYellow(dir) ==
-   /\ lights[dir] = "yellow"
-   /\ lights'     = [lights EXCEPT ![dir] = "red"]
-
-LightRed(dir)    == 
-   /\ lights[dir] = "red"
-   /\ lights'     = [lights EXCEPT ![dir] = "green"]
-   
-NextClock == clock' = (clock % 10) + 1
-    
-DirectionNext(dir) == \/ LightGreen(dir)
-                      \/ LightYellow(dir)
-                      \/ LightRed(dir)
-
-NoAccident == \A i \in Directions :  ( \/ (lights[i] = "green")
-                                       \/ (lights[i] = "yellow") )=>
-              \A j \in Directions:     \/ i=j 
-                                       \/ lights[j] = "red"
-
-Next == /\ (\E dir \in Directions: DirectionNext(dir))
-        /\ PrintT(lights)
-        /\ PrintT(NoAccident)
-        /\ NextClock
-   
-Accident(t) ==  (     clock > t
-                  /\  NoAccident = TRUE )
-*)
-          
-Spec == Init /\ [][Next]_<<elevators, request>>
+Spec == Init /\ [][Next]_<<elevator, request>>
 -----------------------------------------------------------------------------
-THEOREM Spec => []TypeInvariant
-
+THEOREM Spec => TypeInvariant
 =============================================================================
 \* Modification History
-\* Last modified Tue May 26 16:12:40 PDT 2015 by Me
-\* Created Tue May 26 10:24:21 PDT 2015 by Me
+\* Last modified Fri May 29 23:51:52 PDT 2015 by Me
+\* Last modified Fri May 29 23:02:46 PDT 2015 by Tom
+\* Created Tue May 26 16:13:01 PDT 2015 by Me
