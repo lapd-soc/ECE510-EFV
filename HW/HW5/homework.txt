@@ -1,0 +1,50 @@
+Assignment 5
+Due Thurs, before June 4 class
+Given the following sequence, for each formula, determine if it is true or false.
+a) □¬(x=0 /\ y=0)
+	false
+b) □[x=0 ⇒ y’=0]x,y
+	true
+c) ◊(x=7 /\ y=0)
+	true
+d) ◊<y=0 /\ x’=0>y
+	false
+e) □◊(y ≠ 0)
+	false
+f) ◊□ (x=0 ⇒ y≠0)
+	false
+g) ◊□[FALSE]y -> [X]<v> = X \/ (v' = v)
+	true
+
+	
+Not to be turned in (from previous exams)
+1) Consider the following trace sequence:
+Which of the following formulas hold for the behavior above? Explain your reasoning.
+	a) □ ¬ ( x=3 /\ y’=0 )
+		false - it cannot at any time be that x=3 and y'=0, but times c/d
+	b) □◊( x+y >2 )
+		false - it always be an eventuality that x+y > 2, but x:always = 1, y:always=0
+	c) ◊< x=1 /\ y’=3 >x
+		false - it is an eventuality that x=1 and y'=3 where x changes from x!=1 to x=1, but g/h
+	
+2) Consider a system with two processors and a shared memory. During execution of CISC instructions,
+each processor occasionally requires exclusive access to the memory to read values and possibly
+update the memory. To model the system, consider a game with 2 players who compete for a coin.
+Upon getting the coin, the player flips the coin. If the coin lands heads-up, the player increments a
+counter. The coin then is released and the players compete for the coin again. When one of the
+players has gotten 10 heads, the game restarts.
+Write a specification using TLA+ that includes separate actions for getting the coin and flipping the
+coin. Think first. Then write an outline on this page of the structure of your specification (leaving lots
+of room to then fill in the details ). Use auxiliary definitions. Exact syntax isn't critical, but will
+receive a bonus.
+
+
+
+
+3) Are the following specs Next1 and Next2 equivalent? Explain your reasoning.
+	Next1 == \/ /\ b = 0 	Next2 == b' = IF b = 0 THEN 1 ELSE 0
+			    /\ b' = 1
+			 \/ /\ b = 1
+				/\ b' = 0
+
+	
